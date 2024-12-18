@@ -1,0 +1,28 @@
+---
+import Container from "./Container.astro"
+import clients from '../clients/clients.json'
+---
+
+<div class="relative" id="home">
+  <div aria-hidden="true" class="absolute inset-0 grid grid-cols-2 -space-x-52 opacity-40 dark:opacity-20">
+    <div class="blur-[106px] h-56 bg-gradient-to-br from-primary to-purple-400 dark:from-blue-700"></div>
+    <div class="blur-[106px] h-32 bg-gradient-to-r from-cyan-400 to-sky-300 dark:to-indigo-600"></div>
+  </div>
+  <Container>
+    <div class="relative pt-36 ml-auto">
+      <div class="lg:w-2/3 text-center mx-auto">
+        <h1 class="text-gray-900 dark:text-white font-bold text-5xl md:text-6xl xl:text-7xl">Moldando um mundo com <span class="text-primary">Reimaginação.</span></h1>
+        <p class="mt-8 text-gray-700 dark:text-gray-300">Transforme sua ideia em soluções inovadoras com nossos serviços de software.
+          Oferecemos tecnologia de ponta para impulsionar o seu negócio. Seja através de soluções customizadas, integração de sistemas ou desenvolvimento ágil, estamos aqui para ajudar você a alcançar novos patamares de eficiência e sucesso.</p>
+      </div>
+      <div class="mt-12 grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6">
+      {
+        clients.map((client) => (
+          <div class="p-4 grayscale transition duration-200 hover:grayscale-0">
+            <img src={client.logo} class="h-12 w-auto mx-auto" loading="lazy" alt="client logo" width="" height="" />
+          </div>
+        ))
+      }
+    </div>
+  </Container>
+</div>

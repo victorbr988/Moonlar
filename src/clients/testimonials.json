@@ -1,0 +1,38 @@
+[
+  {
+    "name": "John Doe",
+    "ocupation": "CEO",
+    "image": "./images/avatars/avatar.webp",
+    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum aliquid quo eum quae quos illo earum ipsa doloribus nostrum minus libero aspernatur laborum cum, a suscipit, ratione ea totam ullam! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto laboriosam deleniti aperiam ab veniam sint non cumque quis tempore cupiditate. Sint libero voluptas veniam at reprehenderit, veritatis harum et rerum."
+  },
+  {
+    "name": "Jane Doe",
+    "ocupation": "Marketing",
+    "image": "./images/avatars/avatar-1.webp",
+    "text": "Lorem ipsum dolor laboriosam deleniti aperiam ab veniam sint non cumque quis tempore cupiditate. Sint libero voluptas veniam at reprehenderit, veritatis harum et rerum."
+  },
+  {
+    "name": "Yanick Doe",
+    "ocupation": "Developer",
+    "image": "./images/avatars/avatar-2.webp",
+    "text": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto laboriosam deleniti aperiam ab veniam sint non cumque quis tempore cupiditate. Sint libero voluptas veniam at reprehenderit, veritatis harum et rerum."
+  },
+  {
+    "name": "Jane Doe",
+    "ocupation": "Mobile dev",
+    "image": "./images/avatars/avatar-3.webp",
+    "text": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto laboriosam deleniti aperiam ab veniam sint non cumque quis tempore cupiditate. Sint libero voluptas veniam at reprehenderit, veritatis harum et rerum."
+  },
+  {
+    "name": "Andy Doe",
+    "ocupation": "Manager",
+    "image": "./images/avatars/avatar-4.webp",
+    "text": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto laboriosam deleniti aperiam ab veniam sint non cumque quis tempore cupiditate. Sint libero voluptas veniam at reprehenderit, veritatis harum et rerum."
+  },
+  {
+    "name": "Yanndy Doe",
+    "ocupation": "Mobile dev",
+    "image": "./images/avatars/avatar-2.webp",
+    "text": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto laboriosam deleniti aperiam ab veniam sint non cumque quis tempore cupiditate. Sint libero voluptas veniam at reprehenderit, veritatis harum et rerum."
+  }
+]
