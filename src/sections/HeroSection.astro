@@ -1,6 +1,5 @@
 ---
-import Container from "./Container.astro"
-// import clients from '../clients/clients.json'
+import Container from "../components/Container.astro";
 ---
 
 <div class="relative" id="home">
@@ -14,13 +13,6 @@ import Container from "./Container.astro"
         <h1 class="text-gray-900 dark:text-white font-bold text-5xl md:text-6xl xl:text-7xl">Transformamos suas ideias em <span class="text-primary">soluções de software </span>sob medida </h1>
         <p class="mt-8 text-gray-700 dark:text-gray-300">Desenvolvimento de aplicações modernas, responsivas e escaláveis.</p>
       </div>
-      <!-- {
-        clients.map((client) => (
-          <div class="p-4 grayscale transition duration-200 hover:grayscale-0">
-            <img src={client.logo} class="h-12 w-auto mx-auto" loading="lazy" alt="client logo" width="" height="" />
-          </div>
-        ))
-      } -->
       <section class="w-full md:flex hidden justify-center">
         <div class="w-full h-[520px] bg-[#1f1e1e] rounded-lg p-4 mt-20 container-code shadow-xl">
           <pre class="code-line"><span class="line-number">1</span><span class="keyword">import</span> <span class="string">'transformandoIdeias'</span> <span class="keyword">from</span> <span class="string">'@moonlar/utils'</span>;</pre>
