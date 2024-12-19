@@ -1,139 +1,67 @@
 ---
 import Container from "./Container.astro"
-
+import CardFeature from "./card/CardFeature.astro"
 ---
 
-<div id="features">
-  <Container>
-    <div class="md:w-2/3 lg:w-1/2">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-secondary">
-        <path fill-rule="evenodd" d="M9 4.5a.75.75 0 01.721.544l.813 2.846a3.75 3.75 0 002.576 2.576l2.846.813a.75.75 0 010 1.442l-2.846.813a3.75 3.75 0 00-2.576 2.576l-.813 2.846a.75.75 0 01-1.442 0l-.813-2.846a3.75 3.75 0 00-2.576-2.576l-2.846-.813a.75.75 0 010-1.442l2.846-.813A3.75 3.75 0 007.466 7.89l.813-2.846A.75.75 0 019 4.5zM18 1.5a.75.75 0 01.728.568l.258 1.036c.236.94.97 1.674 1.91 1.91l1.036.258a.75.75 0 010 1.456l-1.036.258c-.94.236-1.674.97-1.91 1.91l-.258 1.036a.75.75 0 01-1.456 0l-.258-1.036a2.625 2.625 0 00-1.91-1.91l-1.036-.258a.75.75 0 010-1.456l1.036-.258a2.625 2.625 0 001.91-1.91l.258-1.036A.75.75 0 0118 1.5zM16.5 15a.75.75 0 01.712.513l.394 1.183c.15.447.5.799.948.948l1.183.395a.75.75 0 010 1.422l-1.183.395c-.447.15-.799.5-.948.948l-.395 1.183a.75.75 0 01-1.422 0l-.395-1.183a1.5 1.5 0 00-.948-.948l-1.183-.395a.75.75 0 010-1.422l1.183-.395c.447-.15.799-.5.948-.948l.395-1.183A.75.75 0 0116.5 15z" clip-rule="evenodd" />
-      </svg>
-      
-      <h2 class="my-8 text-2xl font-bold text-gray-700 dark:text-white md:text-4xl">
-        Soluções tecnológicas inovadoras para suas necessidades de software.
-      </h2>
-      <p class="text-gray-600 dark:text-gray-300">Na <strong>Moonlar</strong>, oferecemos serviços de software personalizados para otimizar processos e transformar operações. Com tecnologia de ponta, ajudamos a impulsionar sua eficiência e inovação, atendendo a diversos setores com soluções flexíveis e ágeis.</p>
-    </div>
-    <div
-      class="mt-16 grid divide-x divide-y divide-gray-100 dark:divide-gray-700 overflow-hidden rounded-3xl border border-gray-100 text-gray-600 dark:border-gray-700 sm:grid-cols-2 lg:grid-cols-4 lg:divide-y-0 xl:grid-cols-4"
-    >
-      <div class="group relative bg-white dark:bg-gray-800 transition hover:z-[1] hover:shadow-2xl hover:shadow-gray-600/10">
-        <div class="relative space-y-8 py-12 p-8">
-          <img
-            src="https://cdn-icons-png.flaticon.com/512/4341/4341139.png"
-            class="w-12"
-            width="512"
-            height="512"
-            alt="burger illustration"
-          />
+<Container>
+  <div class="container px-6 py-10 mx-auto">
+      <h1 class="text-2xl font-semibold text-gray-800 capitalize lg:text-3xl dark:text-white">Expolore nossos tipos de <br><span class="text-primary">Serviços</span></h1>
 
-          <div class="space-y-2">
-            <h5
-              class="text-xl font-semibold text-gray-700 dark:text-white transition group-hover:text-secondary"
-            >
-              First feature
-            </h5>
-            <p class="text-gray-600 dark:text-gray-300">
-              Neque Dolor, fugiat non cum doloribus aperiam voluptates nostrum.
-            </p>
-          </div>
-          <a href="#" class="flex items-center justify-between group-hover:text-secondary">
-            <span class="text-sm">Read more</span>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 -translate-x-4 text-2xl opacity-0 transition duration-300 group-hover:translate-x-0 group-hover:opacity-100">
-              <path fill-rule="evenodd" d="M12.97 3.97a.75.75 0 011.06 0l7.5 7.5a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 11-1.06-1.06l6.22-6.22H3a.75.75 0 010-1.5h16.19l-6.22-6.22a.75.75 0 010-1.06z" clip-rule="evenodd" />
-            </svg>                
-          </a>
-        </div>
+      <div class="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-16 md:grid-cols-2 xl:grid-cols-3">
+        <CardFeature>
+          <span slot="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-smartphone"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+          </span>
+          <span slot="title">Mobile</span>
+          <span slot="description">
+            Desenvolvimento de aplicações mobile para Android e iOS.
+          </span>
+        </CardFeature>
+        <CardFeature>
+          <span slot="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-globe"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+          </span>
+          <span slot="title">Web</span>
+          <span slot="description">
+            Desenvolvimento de aplicações web para navegadores e desktop.
+          </span>
+        </CardFeature>
+        <CardFeature>
+          <span slot="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-code"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+          </span>
+          <span slot="title">API</span>
+          <span slot="description">
+            Desenvolvimento de APIs para integração com outras aplicações.
+          </span>
+        </CardFeature>
+        <CardFeature>
+          <span slot="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-git-branch"><line x1="6" y1="3" x2="6" y2="15"></line><circle cx="18" cy="6" r="3"></circle><circle cx="6" cy="18" r="3"></circle><path d="M18 9a9 9 0 0 1-9 9"></path></svg>
+          </span>
+          <span slot="title">Automações</span>
+          <span slot="description">
+            Automações de processos de desenvolvimento interno.
+          </span>
+        </CardFeature>
+        <CardFeature>
+          <span slot="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-message-square"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+          </span>
+          <span slot="title">Consultoria</span>
+          <span slot="description">
+            Consultoria para melhorar a qualidade do seu projeto.
+          </span>
+        </CardFeature>
+        <CardFeature>
+          <span slot="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-hard-drive"><line x1="22" y1="12" x2="2" y2="12"></line><path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"></path><line x1="6" y1="16" x2="6.01" y2="16"></line><line x1="10" y1="16" x2="10.01" y2="16"></line></svg>
+          </span>
+          <span slot="title">Infraestrutura</span>
+          <span slot="description">
+            Criando infraestrutura para o seu projeto com Cloud.
+          </span>
+        </CardFeature>
       </div>
-      <div class="group relative bg-white dark:bg-gray-800 transition hover:z-[1] hover:shadow-2xl hover:shadow-gray-600/10">
-        <div class="relative space-y-8 py-12 p-8">
-          <img
-            src="https://cdn-icons-png.flaticon.com/512/4341/4341134.png"
-            class="w-12"
-            width="512"
-            height="512"
-            alt="burger illustration"
-          />
-
-          <div class="space-y-2">
-            <h5
-              class="text-xl font-semibold text-gray-700 dark:text-white transition group-hover:text-secondary"
-            >
-              Second feature
-            </h5>
-            <p class="text-gray-600 dark:text-gray-300">
-              Neque Dolor, fugiat non cum doloribus aperiam voluptates nostrum.
-            </p>
-          </div>
-          <a href="#" class="flex items-center justify-between group-hover:text-secondary">
-            <span class="text-sm">Read more</span>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 -translate-x-4 text-2xl opacity-0 transition duration-300 group-hover:translate-x-0 group-hover:opacity-100">
-              <path fill-rule="evenodd" d="M12.97 3.97a.75.75 0 011.06 0l7.5 7.5a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 11-1.06-1.06l6.22-6.22H3a.75.75 0 010-1.5h16.19l-6.22-6.22a.75.75 0 010-1.06z" clip-rule="evenodd" />
-            </svg>                
-          </a>
-        </div>
-      </div>
-      <div class="group relative bg-white dark:bg-gray-800 transition hover:z-[1] hover:shadow-2xl hover:shadow-gray-600/10">
-        <div class="relative space-y-8 py-12 p-8">
-          <img
-            src="https://cdn-icons-png.flaticon.com/512/4341/4341160.png"
-            class="w-12"
-            width="512"
-            height="512"
-            alt="burger illustration"
-          />
-
-          <div class="space-y-2">
-            <h5
-              class="text-xl font-semibold text-gray-700 dark:text-white transition group-hover:text-secondary"
-            >
-              Third feature
-            </h5>
-            <p class="text-gray-600 dark:text-gray-300">
-              Neque Dolor, fugiat non cum doloribus aperiam voluptates nostrum.
-            </p>
-          </div>
-          <a href="#" class="flex items-center justify-between group-hover:text-secondary">
-            <span class="text-sm">Read more</span>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 -translate-x-4 text-2xl opacity-0 transition duration-300 group-hover:translate-x-0 group-hover:opacity-100">
-              <path fill-rule="evenodd" d="M12.97 3.97a.75.75 0 011.06 0l7.5 7.5a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 11-1.06-1.06l6.22-6.22H3a.75.75 0 010-1.5h16.19l-6.22-6.22a.75.75 0 010-1.06z" clip-rule="evenodd" />
-            </svg>                
-          </a>
-        </div>
-      </div>
-      <div
-        class="group relative bg-gray-50 dark:bg-gray-900 transition hover:z-[1] hover:shadow-2xl hover:shadow-gray-600/10"
-      >
-        <div
-          class="relative space-y-8 py-12 p-8 transition duration-300 group-hover:bg-white dark:group-hover:bg-gray-800"
-        >
-          <img
-            src="https://cdn-icons-png.flaticon.com/512/4341/4341025.png"
-            class="w-12"
-            width="512"
-            height="512"
-            alt="burger illustration"
-          />
-
-          <div class="space-y-2">
-            <h5
-              class="text-xl font-semibold text-gray-700 dark:text-white transition group-hover:text-secondary"
-            >
-              More features
-            </h5>
-            <p class="text-gray-600 dark:text-gray-300">
-              Neque Dolor, fugiat non cum doloribus aperiam voluptates nostrum.
-            </p>
-          </div>
-          <a href="#" class="flex items-center justify-between group-hover:text-secondary">
-            <span class="text-sm">Read more</span>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 -translate-x-4 text-2xl opacity-0 transition duration-300 group-hover:translate-x-0 group-hover:opacity-100">
-              <path fill-rule="evenodd" d="M12.97 3.97a.75.75 0 011.06 0l7.5 7.5a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 11-1.06-1.06l6.22-6.22H3a.75.75 0 010-1.5h16.19l-6.22-6.22a.75.75 0 010-1.06z" clip-rule="evenodd" />
-            </svg>                
-          </a>
-        </div>
-      </div>
-    </div>
-  </Container>
-</div>
+  </div>
+</Container>

@@ -1,6 +1,6 @@
 ---
 import Container from "./Container.astro"
-import clients from '../clients/clients.json'
+// import clients from '../clients/clients.json'
 ---
 
 <div class="relative" id="home">
@@ -9,20 +9,108 @@ import clients from '../clients/clients.json'
     <div class="blur-[106px] h-32 bg-gradient-to-r from-cyan-400 to-sky-300 dark:to-indigo-600"></div>
   </div>
   <Container>
-    <div class="relative pt-36 ml-auto">
+    <div class="relative pt-36 ml-auto w-full">
       <div class="lg:w-2/3 text-center mx-auto">
-        <h1 class="text-gray-900 dark:text-white font-bold text-5xl md:text-6xl xl:text-7xl">Moldando um mundo com <span class="text-primary">Reimaginação.</span></h1>
-        <p class="mt-8 text-gray-700 dark:text-gray-300">Transforme sua ideia em soluções inovadoras com nossos serviços de software.
-          Oferecemos tecnologia de ponta para impulsionar o seu negócio. Seja através de soluções customizadas, integração de sistemas ou desenvolvimento ágil, estamos aqui para ajudar você a alcançar novos patamares de eficiência e sucesso.</p>
+        <h1 class="text-gray-900 dark:text-white font-bold text-5xl md:text-6xl xl:text-7xl">Transformamos suas ideias em <span class="text-primary">soluções de software </span>sob medida </h1>
+        <p class="mt-8 text-gray-700 dark:text-gray-300">Desenvolvimento de aplicações modernas, responsivas e escaláveis.</p>
       </div>
-      <div class="mt-12 grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6">
-      {
+      <!-- {
         clients.map((client) => (
           <div class="p-4 grayscale transition duration-200 hover:grayscale-0">
             <img src={client.logo} class="h-12 w-auto mx-auto" loading="lazy" alt="client logo" width="" height="" />
           </div>
         ))
-      }
+      } -->
+      <section class="w-full md:flex hidden justify-center">
+        <div class="w-full h-[520px] bg-[#1f1e1e] rounded-lg p-4 mt-20 container-code shadow-xl">
+          <pre class="code-line"><span class="line-number">1</span><span class="keyword">import</span> <span class="string">'transformandoIdeias'</span> <span class="keyword">from</span> <span class="string">'@moonlar/utils'</span>;</pre>
+          <pre class="code-line"><span class="line-number">2</span><span class="keyword">import</span> <span class="string">'validateIdea'</span> <span class="keyword">from</span> <span class="string">'@moonlar/validators'</span>;</pre>
+          <pre class="code-line"><span class="line-number">3</span></pre>
+          <pre class="code-line"><span class="line-number">4</span><span class="keyword">function</span> <span class="keyword">createSolution</span>{`(suaIdeia) {`}</pre>
+          <pre class="code-line"><span class="line-number">5</span>    <span class="comment">// Valida se a ideia é viável</span></pre>
+          <pre class="code-line"><span class="line-number">6</span>    <span class="keyword">if</span> {`(!validateIdea(suaIdeia)) {`}</pre>
+          <pre class="code-line"><span class="line-number">7</span>        <span class="keyword">throw</span> <span class="string">new Error('Ideia inválida.')</span>;</pre>
+          <pre class="code-line"><span class="line-number">8</span>    {`}`}</pre>
+          <pre class="code-line"><span class="line-number">9</span></pre>
+          <pre class="code-line"><span class="line-number">10</span>    <span class="keyword">const</span> solution = <span class="keyword">transformandoIdeias</span>(suaIdeia);</pre>
+          <pre class="code-line"><span class="line-number">11</span>    <span class="keyword">return</span> solution;</pre>
+          <pre class="code-line"><span class="line-number">12</span>{`}`}</pre>
+          <pre class="code-line"><span class="line-number">13</span></pre>
+          <pre class="code-line"><span class="line-number">14</span><span class="comment">// Exemplo de uso</span></pre>
+          <pre class="code-line"><span class="line-number">15</span><span class="keyword">try</span> {`{`}</pre>
+          <pre class="code-line"><span class="line-number">16</span>    <span class="keyword">const</span> project = <span class="keyword">createSolution</span>(<span class="string">'Plataforma de e-commerce'</span>);</pre>
+          <pre class="code-line"><span class="line-number">17</span>    <span class="keyword">console.log</span>(project);</pre>
+          <pre class="code-line"><span class="line-number">18</span>{`}`} <span class="keyword">catch</span>{`(error) {`}</pre>
+          <pre class="code-line"><span class="line-number">19</span>    <span class="keyword">console.error</span>(<span class="string">'Erro:'</span>, error.message);</pre>
+          <pre class="code-line"><span class="line-number">20</span>{`}`}</pre>
+        </div>
+      </section>
+      
     </div>
   </Container>
 </div>
+
+<style>
+    .code-line {
+      font-family: 'Courier New', monospace;
+      font-size: 1rem;
+      line-height: 1.5;
+      color: #d4d4d4;
+    }
+
+    .code-line .line-number {
+      display: inline-block;
+      width: 2rem;
+      text-align: right;
+      color: #606060;
+      margin-right: 1rem;
+    }
+
+    .code-line .keyword {
+      color: #569cd6;
+    }
+
+    .code-line .string {
+      color: #ce9178;
+    }
+
+    .code-line .comment {
+      color: #6a9955;
+    }
+
+    .cta-btn:hover {
+      background-color: #3c8bdc;
+    }
+    /* Responsividade */
+@media (max-width: 768px) {
+  .code-line {
+    font-size: 0.9rem; /* Reduz a fonte para telas menores */
+  }
+
+  .code-line .line-number {
+    width: 1.5rem; /* Ajusta o espaçamento do número da linha */
+    margin-right: 0.5rem;
+  }
+
+  .cta-btn {
+    padding: 0.5rem 1rem; /* Reduz o tamanho do botão */
+    font-size: 0.9rem; /* Reduz a fonte do botão */
+  }
+}
+
+@media (max-width: 480px) {
+  .code-line {
+    font-size: 0.8rem; /* Fonte menor para dispositivos muito pequenos */
+  }
+
+  .code-line .line-number {
+    width: 1.25rem; /* Ajusta novamente o espaçamento */
+    margin-right: 0.5rem;
+  }
+
+  .cta-btn {
+    padding: 0.5rem 0.75rem; /* Botão ainda menor */
+    font-size: 0.8rem; /* Fonte do botão reduzida */
+  }
+}
+</style>
