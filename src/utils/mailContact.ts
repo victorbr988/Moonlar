@@ -1,0 +1,1 @@
+export const mailContact = "contato@moonlar.com";

@@ -1,0 +1,15 @@
+---
+import { mailContact } from "../utils/mailContact";
+
+interface Props {
+  url: string;
+}
+
+const { url } = Astro.props;
+---
+
+<div class="flex mt-4 -mx-1.5 ">
+  <a href={url} class="mx-1.5 text-white transition-colors duration-300 transform hover:text-blue-500">
+    <slot name="icon"></slot>
+  </a>
+</div>
