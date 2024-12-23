@@ -5,63 +5,57 @@ import CardFeature from "../components/CardFeature.astro"
 
 <Container>
   <div id="features" class="container px-6 py-10 mx-auto">
-      <h1 class="text-2xl font-semibold text-gray-800 capitalize lg:text-3xl dark:text-white">Expolore nossos tipos de <br><span class="text-primary">Serviços</span></h1>
+    <h1 class="text-2xl font-semibold text-gray-800 capitalize lg:text-3xl dark:text-white">
+      Explore nossos tipos de<br>
+      <span class="text-primary">Serviços</span>
+    </h1>
+    <p class="mt-4 text-gray-700 dark:text-gray-300 text-lg">
+      Transforme suas ideias em soluções digitais de impacto. Oferecemos serviços especializados em desenvolvimento de software, infraestrutura em Cloud, automações e muito mais.
+    </p>
 
-      <div class="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-16 md:grid-cols-2 xl:grid-cols-3">
-        <CardFeature>
-          <span slot="icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-smartphone"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
-          </span>
-          <span slot="title">Mobile</span>
-          <span slot="description">
-            Desenvolvimento de aplicações mobile para Android e iOS.
-          </span>
-        </CardFeature>
-        <CardFeature>
-          <span slot="icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-globe"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-          </span>
-          <span slot="title">Web</span>
-          <span slot="description">
-            Desenvolvimento de aplicações web para navegadores e desktop.
-          </span>
-        </CardFeature>
-        <CardFeature>
-          <span slot="icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-code"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
-          </span>
-          <span slot="title">API</span>
-          <span slot="description">
-            Desenvolvimento de APIs para integração com outras aplicações.
-          </span>
-        </CardFeature>
-        <CardFeature>
-          <span slot="icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-git-branch"><line x1="6" y1="3" x2="6" y2="15"></line><circle cx="18" cy="6" r="3"></circle><circle cx="6" cy="18" r="3"></circle><path d="M18 9a9 9 0 0 1-9 9"></path></svg>
-          </span>
-          <span slot="title">Automações</span>
-          <span slot="description">
-            Automações de processos de desenvolvimento interno.
-          </span>
-        </CardFeature>
-        <CardFeature>
-          <span slot="icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-message-square"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
-          </span>
-          <span slot="title">Consultoria</span>
-          <span slot="description">
-            Consultoria para melhorar a qualidade do seu projeto.
-          </span>
-        </CardFeature>
-        <CardFeature>
-          <span slot="icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-hard-drive"><line x1="22" y1="12" x2="2" y2="12"></line><path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"></path><line x1="6" y1="16" x2="6.01" y2="16"></line><line x1="10" y1="16" x2="10.01" y2="16"></line></svg>
-          </span>
-          <span slot="title">Infraestrutura</span>
-          <span slot="description">
-            Criando infraestrutura para o seu projeto com Cloud.
-          </span>
-        </CardFeature>
-      </div>
+    <div class="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-16 md:grid-cols-2 xl:grid-cols-3">
+      <CardFeature>
+        <svg slot="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-smartphone"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+        <span slot="title">Desenvolvimento Mobile</span>
+        <span slot="description">
+          Desenvolvimento de aplicativos Android e iOS com design responsivo e funcionalidade impecável, para oferecer a melhor experiência aos seus usuários.
+        </span>
+      </CardFeature>
+      <CardFeature>
+        <svg slot="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-globe"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+        <span slot="title">Desenvolvimento Web</span>
+        <span slot="description">
+          Criação de plataformas web robustas, otimizadas para navegadores e desktop, que acompanham o crescimento da sua empresa.
+        </span>
+      </CardFeature>
+      <CardFeature>
+        <svg slot="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-code"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+        <span slot="title">APIs e Integrações</span>
+        <span slot="description">
+          Criamos APIs seguras, otimizadas e escaláveis, permitindo a integração de sistemas e a expansão do seu ecossistema digital.
+        </span>
+      </CardFeature>
+      <CardFeature>
+        <svg slot="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-git-branch"><line x1="6" y1="3" x2="6" y2="15"></line><circle cx="18" cy="6" r="3"></circle><circle cx="6" cy="18" r="3"></circle><path d="M18 9a9 9 0 0 1-9 9"></path></svg>
+        <span slot="title">Automação de Processos</span>
+        <span slot="description">
+          Automatizamos fluxos de trabalho, otimizando operações internas e aumentando a produtividade da sua equipe.
+        </span>
+      </CardFeature>
+      <CardFeature>
+        <svg slot="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-message-square"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+        <span slot="title">Consultoria Técnica</span>
+        <span slot="description">
+          Analisamos e aprimoramos seus projetos com consultoria especializada, garantindo alta performance e eficiência.
+        </span>
+      </CardFeature>
+      <CardFeature>
+        <svg slot="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-hard-drive"><line x1="22" y1="12" x2="2" y2="12"></line><path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"></path><line x1="6" y1="16" x2="6.01" y2="16"></line><line x1="10" y1="16" x2="10.01" y2="16"></line></svg>
+        <span slot="title">Infraestrutura em Cloud</span>
+        <span slot="description">
+          Planejamos e implementamos infraestrutura escalável e segura na nuvem, garantindo a disponibilidade e confiabilidade do seu projeto.
+        </span>
+      </CardFeature>
+    </div>
   </div>
 </Container>

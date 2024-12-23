@@ -10,11 +10,11 @@ import Container from "../components/Container.astro";
                 <input aria-hidden="true" type="checkbox" name="toggle_nav" id="toggle_nav" class="hidden peer">
                 <div class="relative z-20 w-full flex justify-between lg:w-max md:px-0">
                     <a href="#home" aria-label="logo" class="flex space-x-2 items-center">
-                        <img class="w-36" src="/logo.png" alt="logo">
+                        <img class="w-36" src="/logo.png" alt="Logo da empresa - [Descreva o Nome/Serviço Aqui]">
                     </a>
                     
                     <div class="relative flex items-center lg:hidden max-h-10">
-                        <label role="button" for="toggle_nav" aria-label="humburger" id="hamburger" class="relative p-6 -mr-6">
+                        <label role="button" for="toggle_nav" aria-label="Abrir menu de navegação" id="hamburger" class="relative p-6 -mr-6">
                             <div aria-hidden="true" id="line" class="m-auto h-0.5 w-5 rounded bg-sky-900 dark:bg-gray-300 transition duration-300"></div>
                             <div aria-hidden="true" id="line2" class="m-auto mt-2 h-0.5 w-5 rounded bg-sky-900 dark:bg-gray-300 transition duration-300"></div>
                         </label>
@@ -29,17 +29,12 @@ import Container from "../components/Container.astro";
                     <div class="text-gray-600 dark:text-gray-300 lg:pr-4 lg:w-auto w-full lg:pt-0">
                         <ul class="tracking-wide font-medium lg:text-sm flex-col flex lg:flex-row gap-6 lg:gap-0">
                             <li>
-                                <a href="#features" class="block md:px-4 transition hover:text-primary">
+                                <a href="#features" class="block md:px-4 transition hover:text-primary" title="Ver nossos serviços">
                                     <span>Serviços</span>
                                 </a>
                             </li>
-                            <!-- <li>
-                                <a href="#testimonials" class="block md:px-4 transition hover:text-primary">
-                                    <span>Feedbacks</span>
-                                </a>
-                            </li> -->
                             <li>
-                                <a href="#work" class="block md:px-4 transition hover:text-primary">
+                                <a href="#work" class="block md:px-4 transition hover:text-primary" title="Entenda como funciona">
                                     <span>Como funciona?</span>
                                 </a>
                             </li>
@@ -50,6 +45,7 @@ import Container from "../components/Container.astro";
                         <a
                             href="#contact"
                             class="relative flex h-9 w-full items-center justify-center px-4 before:absolute before:inset-0 before:rounded-full before:bg-primary before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 sm:w-max"
+                            title="Entrar em contato"
                             >
                             <span class="relative text-sm font-semibold text-white"
                                 >Entrar em contato</span

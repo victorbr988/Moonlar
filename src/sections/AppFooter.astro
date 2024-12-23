@@ -10,24 +10,23 @@ import { mailContact } from "../utils/mailContact";
     <section>
       <div class="container flex flex-col px-6 mx-auto">
         <div class="flex-1 lg:flex lg:items-center lg:-mx-6">
-          <div class="text-white lg:w-1/2 lg:mx-6">
+          <address class="text-white lg:w-1/2 lg:mx-6 not-italic">
             <h1 class="text-2xl font-semibold capitalize lg:text-3xl">Entre em contato conosco</h1>
-
-            <p class="max-w-xl mt-6">Aqui fazemos tudo o que podemos para que nossos serviços sejam úteis para você</p>
+            <p class="max-w-xl mt-6">Estamos aqui para ajudar! Entre em contato para saber mais sobre nossos serviços.</p>
 
             <div class="mt-6 space-y-8 md:mt-8">
               <p class="flex items-start -mx-2">
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mx-2 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mx-2 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
-
-                <span class="mx-2 text-white truncate w-72 font-medium">{mailContact}</span>
+                <span class="mx-2 text-white truncate w-72 font-medium">
+                  {mailContact}
+                </span>
               </p>
             </div>
 
             <div class="mt-6 md:mt-8">
-              <h3 class="text-gray-300 ">Acompanhe nossas redes</h3>
-
+              <h3 class="text-gray-300">Acompanhe nossas redes sociais</h3>
               {
                 socialMedias.map((socialMedia) => (
                   <Media url={socialMedia.url}>
@@ -39,46 +38,36 @@ import { mailContact } from "../utils/mailContact";
                   </Media>
               ))}
             </div>
-          </div>
-  
-            <div class="mt-8 lg:w-1/2 lg:mx-6">
-              <div class="w-full px-8 py-10 mx-auto overflow-hidden bg-white shadow-2xl rounded-xl dark:bg-gray-900 lg:max-w-xl">
-                <h1 class="text-xl font-medium text-gray-700 dark:text-gray-200">Formulário para contato</h1>
-              
-                <form class="mt-4">
-                  <div class="flex-1">
-                    <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Título</label>
-                    <input value="Contratar serviço" id="subject" type="text" placeholder="Contratar serviço" class="block w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring" />
-                  </div>
-                  <div class="w-full mt-6">
-                    <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Mensagem</label>
-                    <textarea 
-                      id="body" 
-                      class="block w-full h-32 px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md md:h-48 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring" placeholder="Message"></textarea>
-                  </div>
+          </address>
 
-                  <button 
-                    id="submit"
-                    type="button"
-                    onclick="sendMessage()"
-                    class="w-full px-6 py-3 mt-6 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-600 rounded-md hover:bg-blue-500 focus:outline-none focus:ring focus:ring-blue-400 focus:ring-opacity-50"
-                  >
-                    Enviar mensagem
-                  </button>
-                </form>
+          <div class="mt-8 lg:w-1/2 lg:mx-6">
+            <form class="w-full px-8 py-10 mx-auto overflow-hidden bg-white shadow-2xl rounded-xl dark:bg-gray-900 lg:max-w-xl" aria-labelledby="contact-form">
+              <h2 id="contact-form" class="text-xl font-medium text-gray-700 dark:text-gray-200">Formulário para contato</h2>
+              
+              <div class="mt-4">
+                <label for="subject" class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Título</label>
+                <input id="subject" type="text" placeholder="Contratar serviço" class="block w-full px-5 py-3 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:ring focus:ring-blue-300 focus:border-blue-400" />
               </div>
-            </div>
+
+              <div class="mt-4">
+                <label for="body" class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Mensagem</label>
+                <textarea id="body" placeholder="Mensagem mais detalhada" class="block w-full h-32 px-5 py-3 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:ring focus:ring-blue-300 focus:border-blue-400"></textarea>
+              </div>
+
+              <button id="submit" type="button" onclick="sendMessage()" class="w-full px-6 py-3 mt-6 text-sm font-medium text-white bg-blue-600 rounded-md hover:bg-blue-500 focus:outline-none focus:ring focus:ring-blue-300">
+                Enviar mensagem
+              </button>
+            </form>
+          </div>
         </div>
       </div>
-  </section>
+    </section>
   </Container>
 </footer>
 
+
 <script>
   import { mailContact } from "../utils/mailContact";
-
-  const textArea = document.querySelector('textarea');
-  textArea.value = "Olá, Gostaria de ver mais informações sobre os serviços oferecidos pelo Moonlar.";
 
   function getMessageSubject() {
     const messageSubject: any = document.getElementById("subject");
@@ -91,16 +80,16 @@ import { mailContact } from "../utils/mailContact";
   }
 
   function sendMessage() {
-    const messageBody = getMessageBody().length > 0 ? getMessageBody() : "Olá, Gostaria de ver mais informações sobre os serviços oferecidos pelo Moonlar.";
-    const messageSubject = getMessageSubject().length > 0 ? getMessageSubject() : "Contato Moonlar";
+    const messageBody = getMessageBody() 
+    const messageSubject = getMessageSubject();
     window.location.href = `mailto:${mailContact}?subject=${messageSubject}&body=${messageBody}`;
   }
 
   function clearFields() {
     const messageSubject: any = document.getElementById("subject");
     const messageBody: any = document.getElementById("body");
-    messageSubject.value = "Contratar serviço";
-    messageBody.value = "Olá, Gostaria de ver mais informações sobre os serviços oferecidos pelo Moonlar.";
+    messageSubject.value = "";
+    messageBody.value = "";
   }
 
   const buttons = document.querySelectorAll('#submit');
